@@ -41,11 +41,24 @@ let questions = [
     },
 ]
 
+const toggleModeBtn = document.getElementById('toggleMode');
 const quizContainer = document.getElementById('quizContainer');
 const questionsUl = document.getElementById('questionsUl');
 const resultContainer = document.getElementById('resultContainer');
 const resultBtn = document.getElementById('resultBtn');
 const resetBtn = document.getElementById('resetBtn');
+
+const toggleMode = () => {
+  document.body.classList.toggle('darkMode');
+  changeModeText();
+};
+
+toggleModeBtn.addEventListener('click', toggleMode);
+
+const changeModeText = () => {
+  const isDarkMode = document.body.classList.contains('darkMode');
+  toggleModeBtn.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+};
 
 const startQuiz = () => {
     questions.forEach((question, index) => {
