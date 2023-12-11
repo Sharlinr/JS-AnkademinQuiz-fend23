@@ -51,7 +51,7 @@ const startQuiz = () => {
     questions.forEach((question, index) => {
         const li = document.createElement('li');
         li.innerHTML = `
-        <span>${index + 1}. ${question.question}</span>
+        <legend>${index + 1}. ${question.question}</legend>
         <label>
         <input type="radio" name='${index}' value='true'>True
         </label>
