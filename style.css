@@ -11,16 +11,13 @@ body{
     background-color: #D9E8F5;
     color: #011126;
     border-radius: 8px;
-    flex-direction: column;
     text-align: center;
     padding: 20px;
     margin: auto;
 }
 
 button{
-    border: none;
     width: 20vh;
-    color: #011126;
     font-weight: bolder;
     border: 1px solid black;
     border-radius: 4px;

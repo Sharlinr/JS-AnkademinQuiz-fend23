@@ -1,21 +1,17 @@
 let questions = [
     {
-        type: 'trueFalse',
         question: 'Scotland’s national animal is a unicorn?', 
         answer: true
     },
     {
-        type: 'trueFalse',
         question: 'Bats are blind?',
         answer: false
     },
     {
-        type: 'trueFalse',
         question: 'The blue whale is the biggest animal to have ever lived?',
         answer: true
     },
     {
-        type: 'trueFalse',
         question: 'Strawberries are not actually berries?',
         answer: true
     },
