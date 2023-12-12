@@ -1,17 +1,21 @@
 let questions = [
     {
+        type: 'trueFalse',
         question: 'Scotland’s national animal is a unicorn?', 
         answer: true
     },
     {
+        type: 'trueFalse',
         question: 'Bats are blind?',
         answer: false
     },
     {
+        type: 'trueFalse',
         question: 'The blue whale is the biggest animal to have ever lived?',
         answer: true
     },
     {
+        type: 'trueFalse',
         question: 'Strawberries are not actually berries?',
         answer: true
     },
@@ -38,7 +42,7 @@ let questions = [
     {
         question: 'I have blue eyes?',
         answer: false
-    },
+    }
 ]
 
 const toggleModeBtn = document.getElementById('toggleMode');
@@ -75,7 +79,6 @@ const startQuiz = () => {
        questionsUl.appendChild(li);
         });
     }
-    //startQuiz();
 
 const showFinalResult = () => {
     const playerAnswers = Array.from(document.querySelectorAll('input[type="radio"]:checked'))
@@ -90,7 +93,6 @@ const showFinalResult = () => {
     correctAnswers.forEach((question, index) => {
     const li = document.createElement('li');
     li.textContent = ` ${index + 1}. ${question.question}`;
-    li.classList.add(question.answer ? 'correct' : 'incorrect');
      resultList.appendChild(li);
 });
 
@@ -116,7 +118,7 @@ const resetQuiz = () => {
     questionsUl.innerHTML = "";
     startQuiz();
 };
-//Event listener for submitBtn
+
 resultBtn.addEventListener('click', showFinalResult);
 resetBtn.addEventListener('click', resetQuiz);
 
