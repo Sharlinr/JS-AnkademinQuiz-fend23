@@ -36,7 +36,7 @@ let questions = [
         answer: true
     },
     {
-        question: 'I have blue eyes?',
+        question: 'Planet Earth is flat?',
         answer: false
     }
 ]
@@ -45,6 +45,7 @@ const toggleModeBtn = document.getElementById('toggleMode');
 const quizContainer = document.getElementById('quizContainer');
 const questionsUl = document.getElementById('questionsUl');
 const resultContainer = document.getElementById('resultContainer');
+const resultDiv = document.getElementById('resultDiv');
 const resultBtn = document.getElementById('resultBtn');
 const resetBtn = document.getElementById('resetBtn');
 
@@ -83,7 +84,7 @@ const showFinalResult = () => {
     const correctAnswers = questions.filter((question, index) => question.answer === playerAnswers[index]);
     const score = (correctAnswers.length / questions.length) * 100;
     
-    resultDiv.innerHTML = `<p>Du fick ${correctAnswers.length} av ${questions.length} rätt!</p>`
+    resultDiv.innerHTML = `<p>Du fick ${correctAnswers.length} av ${questions.length} rätt!</p>`;
 
     const resultList = document.createElement('ul');
     correctAnswers.forEach((question, index) => {
@@ -106,7 +107,7 @@ const showFinalResult = () => {
             resultContainer.style.color = "green";
     }
         resultMsg.textContent = msg;
-    }; 
+}; 
     
 const resetQuiz = () => {
     resultMsg.textContent = "";
